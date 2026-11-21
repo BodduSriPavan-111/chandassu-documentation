@@ -1,0 +1,17 @@
+{
+  "name": "chandassu-web",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.5.2",
+    "next": "^15.0.0",
+    "prismjs": "1.29.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}

@@ -1,0 +1,394 @@
+:where(.page-journey) .footer-bottom p {
+  color: #bdc3c7;
+}
+:where(.page-journey) .hero {
+  position: relative;
+  height: 100vh;
+  height: 100svh;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+:where(.page-journey) .hero h1 {
+  padding: 0 20px;
+  font-size: clamp(3.2rem, 9vw, 7rem);
+  font-weight: 200;
+  letter-spacing: .02em;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 4px 28px rgba(0, 0, 0, .4);
+  animation: rise 1.1s ease both;
+}
+:where(.page-journey) .credit {
+  position: absolute;
+  right: 20px;
+  bottom: 14px;
+  font-size: .72rem;
+  color: #dcdcdc;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, .5);
+}
+:where(.page-journey) .cue {
+  position: absolute;
+  left: 50%;
+  bottom: 46px;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  margin-left: -22px;
+  border: 2px solid rgba(255, 255, 255, .85);
+  border-radius: 50%;
+  color: #fff;
+  text-decoration: none;
+  animation: bob 2s ease-in-out infinite;
+}
+@keyframes bob {
+
+      0%,
+      100% {
+transform: translateY(0);
+      }
+
+      50% {
+transform: translateY(8px);
+      }
+    }
+@keyframes rise {
+      from {
+opacity: 0;
+transform: translateY(26px);
+      }
+
+      to {
+opacity: 1;
+transform: none;
+      }
+    }
+:where(.page-journey) .timeline {
+  padding: 90px 0 100px;
+  background: #fff;
+}
+:where(.page-journey) .wrap {
+  width: min(1100px, calc(100% - 40px));
+  margin: 0 auto;
+}
+:where(.page-journey) #list {
+  padding-right: 105px;
+}
+:where(.page-journey) .head {
+  margin-bottom: 3.4rem;
+}
+:where(.page-journey) .head h2 {
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: #01a33c;
+}
+:where(.page-journey) .head p {
+  margin-top: .3rem;
+  font-size: 1.1rem;
+  color: #01a33c;
+}
+:where(.page-journey) .row {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  align-items: center;
+  margin-bottom: 6rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+:where(.page-journey) .row.in {
+  opacity: 1;
+  transform: none;
+}
+:where(.page-journey) .lab {
+  padding: 1.3rem .6rem;
+  border: 1px solid #000;
+  background: var(--c);
+  color: var(--t);
+  font-size: .85rem;
+  font-weight: 700;
+  line-height: 1.3;
+  text-align: center;
+}
+:where(.page-journey) .card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 13rem;
+  padding: 2.8rem 3.4rem;
+  border: 1px solid #000;
+  border-radius: 16px;
+  background: #fff5e6;
+  color: #000;
+  box-shadow: 10px -10px 0 0 var(--c), 10px -10px 0 1px #000;
+  transition: transform .5s cubic-bezier(.34, 1.56, .64, 1), box-shadow .5s cubic-bezier(.34, 1.56, .64, 1);
+}
+:where(.page-journey) .card.has-go {
+  padding-right: 8.5rem;
+}
+:where(.page-journey) .card:has(.go:hover) {
+  transform: translateY(-8px) scale(1.012);
+  box-shadow: 15px -15px 0 0 var(--c), 15px -15px 0 1px #000;
+}
+:where(.page-journey) .card h3 {
+  font-size: clamp(2rem, 4.4vw, 3.8rem);
+  font-weight: 100;
+  line-height: 1.1;
+  letter-spacing: -.01em;
+}
+:where(.page-journey) .card p {
+  margin-top: .8rem;
+  font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+  line-height: 1.4;
+  color: #444;
+}
+:where(.page-journey) .stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.4rem 3.4rem;
+  margin-top: 1.6rem;
+}
+:where(.page-journey) .stat {
+  display: flex;
+  align-items: flex-end;
+  gap: .9rem;
+}
+:where(.page-journey) .stat b {
+  padding: 0 .1em;
+  font-size: clamp(3.4rem, 8vw, 6.5rem);
+  font-weight: 800;
+  line-height: .95;
+  letter-spacing: -.03em;
+  color: #111;
+  background: linear-gradient(transparent 64%, var(--c) 64%);
+  background: linear-gradient(transparent 64%, color-mix(in srgb, var(--c) 60%, transparent) 64%);
+}
+:where(.page-journey) .stat span {
+  max-width: 9.5rem;
+  padding-bottom: .4rem;
+  font-size: .9rem;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: #333;
+}
+:where(.page-journey) .note {
+  margin-top: 1.2rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #222;
+}
+:where(.page-journey) .note::before {
+  content: "";
+  display: inline-block;
+  width: 2.4rem;
+  height: 4px;
+  margin-right: .7rem;
+  vertical-align: middle;
+  background: var(--c);
+}
+:where(.page-journey) .crew {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem 3.6rem;
+  margin-top: 1.8rem;
+}
+:where(.page-journey) .who {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  color: inherit;
+  text-decoration: none;
+}
+:where(.page-journey) .av {
+  position: relative;
+  overflow: hidden;
+  flex: 0 0 6.2rem;
+  width: 6.2rem;
+  height: 6.2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--c);
+  box-shadow: 0 0 0 4px var(--c), 0 0 0 5px #000;
+  color: var(--t);
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+}
+:where(.page-journey) .av img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+:where(.page-journey) .who b {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000;
+}
+:where(.page-journey) .who em {
+  display: block;
+  margin-top: .15rem;
+  font-size: 1rem;
+  font-style: normal;
+  color: #555;
+}
+:where(.page-journey) .who .li {
+  font-size: 2rem;
+  color: #0A66C2;
+  transition: transform .25s ease;
+}
+:where(.page-journey) a.who:hover b {
+  text-decoration: underline;
+}
+:where(.page-journey) a.who:hover .li {
+  transform: scale(1.15);
+}
+:where(.page-journey) .go {
+  position: absolute;
+  right: 1.6rem;
+  bottom: 1.6rem;
+  width: 5rem;
+  height: 5rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--b);
+  color: #fff;
+  text-decoration: none;
+  transition: color .25s ease, transform .45s cubic-bezier(.34, 1.56, .64, 1);
+}
+:where(.page-journey) .go svg {
+  width: 2.8rem;
+  height: 2.8rem;
+  transition: transform .35s ease;
+}
+:where(.page-journey) .go:hover {
+  color: #000;
+  transform: scale(1.08);
+}
+:where(.page-journey) .go:hover svg {
+  transform: translate(2px, -2px);
+}
+:where(.page-journey) .conn {
+  position: absolute;
+  z-index: 0;
+  width: 70px;
+  border: 12px solid #ffde59;
+  border-left: 0;
+  border-radius: 0 70px 70px 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .8s ease .3s;
+}
+:where(.page-journey) .conn.in {
+  opacity: 1;
+}
+:where(.page-journey) .more {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  margin: 1rem auto 0;
+  padding: .95rem 2.4rem;
+  border: 0;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #01a33c, #bd9700);
+  color: #fff;
+  font: 700 1rem Arial, sans-serif;
+  cursor: pointer;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+:where(.page-journey) .more:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 26px rgba(1, 163, 60, .38), 0 0 20px rgba(189, 151, 0, .4);
+}
+:where(.page-journey) .more:hover i {
+  transform: translateY(3px);
+}
+:where(.page-journey) .more i {
+  transition: transform .3s ease;
+}
+:where(.page-journey) .more[hidden] {
+  display: none;
+}
+@media (max-width: 700px) {
+  :where(.page-journey) .timeline {
+    padding: 70px 0 80px;
+  }
+  :where(.page-journey) .row {
+    display: block;
+    margin-bottom: 3.8rem;
+  }
+  :where(.page-journey) .lab {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    margin-bottom: -1px;
+    padding: .55rem 1.1rem;
+  }
+  :where(.page-journey) #list {
+    padding-right: 60px;
+  }
+  :where(.page-journey) .conn {
+    width: 40px;
+    border-width: 8px;
+    border-left-width: 0;
+    border-radius: 0 40px 40px 0;
+  }
+  :where(.page-journey) .card {
+    min-height: 0;
+    padding: 1.6rem 1.4rem;
+    box-shadow: 7px -7px 0 0 var(--c), 7px -7px 0 1px #000;
+  }
+  :where(.page-journey) .card.has-go {
+    padding: 1.6rem 1.4rem 5.8rem;
+  }
+  :where(.page-journey) .go {
+    right: 1rem;
+    bottom: 1rem;
+    width: 3.8rem;
+    height: 3.8rem;
+  }
+  :where(.page-journey) .go svg {
+    width: 2.1rem;
+    height: 2.1rem;
+  }
+  :where(.page-journey) .av {
+    flex-basis: 4.4rem;
+    width: 4.4rem;
+    height: 4.4rem;
+  }
+  :where(.page-journey) .who b {
+    font-size: 1.2rem;
+  }
+  :where(.page-journey) .credit {
+    font-size: .62rem;
+    right: 12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  :where(.page-journey) .hero h1,
+  :where(.page-journey) .cue {
+    animation: none;
+  }
+  :where(.page-journey) .row,
+  :where(.page-journey) .conn,
+  :where(.page-journey) .card,
+  :where(.page-journey) .go {
+    transition: none;
+  }
+}
+.page-journey {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  min-height: 100vh;
+}
