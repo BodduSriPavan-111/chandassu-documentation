@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { asset } from '@/lib/asset';
 
 const REPO = 'https://github.com/BodduSriPavan-111/chandassu';
 
@@ -28,7 +29,7 @@ export default function Footer({ variant = 'home' }) {
   );
 
   return (
-    <footer className="footer">
+    <footer className="footer footer-photo" style={{ backgroundImage: `linear-gradient(rgba(35, 33, 0, 0.78), rgba(44,62,80,.9)), url("${asset('Footer_Sunset.jpeg')}")` }}>
       <div className="footer-content">
         <div className="footer-section">
           <h3>తెలుగు ఛందస్సు</h3>
@@ -88,6 +89,7 @@ export default function Footer({ variant = 'home' }) {
           <p>&copy; 2025 Boddu Sri Pavan. Made with ❤️ for Global literature.</p>
         </center>
       </div>
+      <span className="footer-credit">© 5 November 2026&nbsp;&nbsp;Captured by Appana Mohan Naga Phani Kumar&nbsp;&nbsp;|&nbsp;&nbsp;CC BY 4.0</span>
     </footer>
   );
 }

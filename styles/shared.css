@@ -195,6 +195,28 @@
   color: #FFD700;
   transform: translateY(-2px);
 }
+:where(.page-home, .page-journey) .footer-photo {
+  position: relative;
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+
+:where(.page-home, .page-journey) .footer-credit {
+  display: block;
+  margin-top: 1rem;
+  text-align: right;
+  font-size: .72rem;
+  color: #dcdcdc;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, .5);
+}
+
+@media (max-width: 700px) {
+  :where(.page-home, .page-journey) .footer-credit {
+    font-size: .62rem;
+    text-align: center;
+  }
+}
 @media (max-width: 480px) {
   :where(.page-home, .page-journey) .navbar {
     padding: 12px 15px;
